@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import GetRandomColor from './GetRandomColor';
+import GetRandomColor from 'helpers/GetRandomColor';
 import css from './Statistics.module.css';
 
 export default function Statistics ({ title, stats }) {
 
   return (
   <section className={css.statistics}>
-    <h2 className={css.title}>{title}</h2>
+    {title && <h2 className={css.title}>{title}</h2>}
 
     <ul className={css.list}>
     {stats.map(({id, label, percentage}) => (
